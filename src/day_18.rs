@@ -3,7 +3,7 @@ use std::fs;
 use std::fmt;
 use std::path::Path;
 
-const ROWS:usize = 400000;
+const ROWS:usize = 40;
 const COLUMNS:usize = 100;
 
 fn readTileData(filename: &str) -> String{
@@ -138,6 +138,6 @@ impl fmt::Display for Dungeon{
 
 pub fn run(){
     let dungeon = Dungeon::new();
-    //println!("{}", dungeon);
+    println!("{}", dungeon);
     println!("\nSafe: {} Trapped: {}",dungeon.count(Tile::Safe), dungeon.count(Tile::Trap) );
 }
